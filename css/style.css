@@ -30,7 +30,13 @@
   z-index: 2;
 }
 
-.navbar__list-submenu {
+.navbar__list-submenu1 {
+  left: 100%;
+  top: 0px;
+  z-index: 3;
+}
+
+.navbar__list-submenu2 {
   left: 100%;
   top: 64px;
   z-index: 3;
