@@ -4,6 +4,7 @@
   --color-light: white;
   --color-dark: black;
   --color-accent: #a7a5a6;
+  --color-mark: #d1d0ce;
 }
 
 *,
@@ -99,3 +100,10 @@
 .navbar__list-submenu li:first-of-type {
   border-left: 0px;
 }
+
+/* подсветка меню */
+
+.navbar__list-product a:hover {
+  background-color: var(--color-mark);
+}
+
