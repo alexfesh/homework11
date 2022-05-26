@@ -1,0 +1,96 @@
+:root {
+  --bgcolor-dark: darkslategrey;
+  --bgcolor-light: #dbd9d8;
+  --color-light: white;
+  --color-dark: black;
+  --color-accent: #a7a5a6;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  position: relative;
+  background-color: var(--bgcolor-dark);
+  border-bottom: 10px solid var(--bgcolor-light);
+}
+
+.navbar__list-menu {
+  display: flex;
+  z-index: 1;
+}
+
+.navbar__list-product {
+  z-index: 2;
+}
+
+.navbar__list-submenu {
+  left: 100%;
+  top: 64px;
+  z-index: 3;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar a {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-light);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  background-color: var(--bgcolor-light);
+  color: var(--color-dark);
+}
+
+.navbar li ul {
+  display: none;
+  position: absolute;
+  min-width: 250px;
+  background-color: var(--bgcolor-light);
+  color: var(--color-dark);
+}
+
+.navbar li ul li {
+  border: 1px solid var(--color-accent);
+}
+
+.navbar li ul a {
+  color: var(--color-dark);
+}
+
+.navbar ul > li:hover > ul {
+  display: block;
+}
+
+/* фиксируем подсветку products */
+
+.navbar__list-menu li:hover .active {
+  background-color: var(--bgcolor-light);
+  color: var(--color-dark);
+}
+
+/* наложение border */
+
+.navbar__list-menu li:last-of-type {
+  border-top: 0px;
+}
+
+.navbar__list-submenu li:first-of-type {
+  border-left: 0px;
+}
+
